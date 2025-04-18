@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Pokémon themed colors
+				pokeRed: "#FF0000",
+				pokeRedLight: "#FF5555",
+				pokeRedDark: "#CC0000",
+				pokeWhite: "#FFFFFF",
+				pokeGray: "#DDDDDD",
+				pokeGrayDark: "#333333",
+				pokeBlue: "#0075BE",
+				pokeYellow: "#FFCC00",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-highlight': {
+					'0%, 100%': { boxShadow: '0 0 0 0 rgba(255, 204, 0, 0)' },
+					'50%': { boxShadow: '0 0 0 10px rgba(255, 204, 0, 0.5)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-highlight': 'pulse-highlight 1.5s ease-in-out infinite'
 			}
 		}
 	},
